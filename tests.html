@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Пособие по компьютерным сетям</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="assets/logo.png">
+            <a href="#">Пособие по компьютерным сетям</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="lectures.html">Лекции</a>
+            <a href="tasks.html">Практические задания</a>
+            <a class="selected"  href="tests.html">Тренажёры</a>
+            <a href="feedback.html">Обратная связь</a>
+        </div>
+    </nav>
+
+    <h1 class="page-title">Тренажёры</h1>
+
+    <div class="div_button-message"><button class="open-modal-btn">Отправить результат</button></div>
+
+    <!-- Модальное окно -->
+    <div class="modal-message" id="modal">
+        <!-- Контент модального окна -->
+        <div class="modal-content-message">
+            <span class="close-modal-btn">×</span>
+            <h2>Отправка результатов теста</h2>
+            
+            <form id="messageForm">
+                <label for="lastName">Фамилия:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                
+                <label for="firstName">Имя:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                
+                <label for="group">Группа:</label>
+                <input type="text" id="group" name="group" required>
+                
+                <label for="testResult">Результат теста:</label>
+                <textarea id="testResult" name="testResult" rows="4" cols="50" required></textarea>
+                
+                <label for="email">Почта получателя:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <div class="div_button"><button type="submit">Отправить</button></div>
+            </form>
+        </div>
+    </div>
+    <div class="content">
+        <div class="works-list">
+            <div class="item">
+                <img src="assets/item-1.jpg">
+                <div class="details">
+                    <h3>Компьютерные сети</h3>
+                    <div class="item-info">
+                        <div class="year-badge">Тренажёр №1</div>
+                    </div>
+                    <p>Этот тренажёр относится к лекции №1</p>
+                    <button  onclick="toggleVisibilityTest()">Перейти к тренажёру</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/item-2.jpg">
+                <div class="details">
+                    <h3>Физический уровень</h3>
+                    <div class="item-info">
+                        <div class="year-badge">Тренажёр №2</div>
+                    </div>
+                    <p>Этот тренажёр относится к лекции №2</p>
+                    <button  onclick="toggleVisibilityTest1()">Перейти к тренажёру</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/item-3.jpg">
+                <div class="details">
+                    <h3>Канальный уровень</h3>
+                    <div class="item-info">
+                        <div class="year-badge">Тренажёр №3</div>
+                    </div>
+                    <p>Этот тренажёр относится к лекции №3</p>
+                    <button onclick="toggleVisibilityTest2()">Перейти к тренажёру</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/item-4.jpg">
+                <div class="details">
+                    <h3>Сетевой уровень</h3>
+                    <div class="item-info">
+                        <div class="year-badge">Тренажёр №4</div>
+                    </div>
+                    <p>Этот тренажёр относится к лекции №4</p>
+                    <button onclick="toggleVisibilityTest3()">Перейти к тренажёру</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/item-5.jpg">
+                <div class="details">
+                    <h3>Транспортный уровень</h3>
+                    <div class="item-info">
+                        <div class="year-badge">Тренажёр №5</div>
+                    </div>
+                    <p>Этот тренажёр относится к лекции №5</p>
+                    <button onclick="toggleVisibilityTest4()">Перейти к тренажёру</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Тренажёр №1 -->
+    <div id="hiddenDivTest" class="modal">
+        <div class="container_test">
+            <span class="close" onclick="hideDivTest()">&times;</span>
+            <h1>Тренажёр по теме "Компьютерные сети"</h1>
+            
+            <form id="networks-test">
+                <!-- Вопрос 1 -->
+                <p><strong>Вопрос 1.</strong> Что такое сеть?</p>
+                <input type="radio" name="question1" value="a"> А. Совокупность взаимосвязанных компьютеров и других устройств, предназначенных для обмена информацией.<br>
+                <input type="radio" name="question1" value="b"> B. Устройство, которое собирает данные от нескольких узлов и передает их дальше по сети.<br>
+                <input type="radio" name="question1" value="c"> C. Набор протоколов, используемых в Интернете.<br>
+                <input type="radio" name="question1" value="d"> D. Система преобразования доменных имен в IP-адреса.<br>
+                
+                <!-- Вопрос 2 -->
+                <p><strong>Вопрос 2.</strong> Какие типы сетей вы знаете?</p>
+                <input type="radio" name="question2" value="a"> A. Локальные, городские и глобальные.<br>
+                <input type="radio" name="question2" value="b"> B. Проводные и беспроводные.<br>
+                <input type="radio" name="question2" value="c"> C. Шинные, звездообразные и кольцевые.<br>
+                <input type="radio" name="question2" value="d"> D. Физические и виртуальные.<br>
+                
+                <!-- Вопрос 3 -->
+                <p><strong>Вопрос 3.</strong> Что такое ARPANET?</p>
+                <input type="radio" name="question3" value="a"> A. Основной набор протоколов, используемых в Интернете.<br>
+                <input type="radio" name="question3" value="b"> B. Первая компьютерная сеть, созданная в 1969 году Министерством обороны США.<br>
+                <input type="radio" name="question3" value="c"> C. Протокол, используемый для передачи веб-страниц и других данных в Интернете.<br>
+                <input type="radio" name="question3" value="d"> D. Система преобразования доменных имен в IP-адреса.<br>
+                
+                <!-- Вопрос 4 -->
+                <p><strong>Вопрос 4.</strong> Каковы основные компоненты компьютерных сетей?</p>
+                <input type="radio" name="question4" value="a"> A. Узлы, каналы связи, маршрутизаторы, коммутаторы, концентраторы.<br>
+                <input type="radio" name="question4" value="b"> B. Доменные имена, IP-адреса, веб-серверы, браузеры.<br>
+                <input type="radio" name="question4" value="c"> C. Операционные системы, прикладные программы, антивирусы.<br>
+                <input type="radio" name="question4" value="d"> D. Веб-сайты, поисковые системы, социальные сети.<br>
+                
+                <!-- Вопрос 5 -->
+                <p><strong>Вопрос 5.</strong> Что такое модель OSI?</p>
+                <input type="radio" name="question5" value="a"> A. Модель, состоящая из четырех уровней: приложение, транспорт, межсеть, доступ к сети.<br>
+                <input type="radio" name="question5" value="b"> B. Модель, состоящая из семи уровней: физический, канальный, сетевой, транспортный, сеансовый, представительный, прикладной.<br>
+                <input type="radio" name="question5" value="c"> C. Методика проектирования компьютерных сетей.<br>
+                <input type="radio" name="question5" value="d"> D. Технология передачи данных через оптическое волокно.<br>
+                
+                <!-- Вопрос 6 -->
+                <p><strong>Вопрос 6.</strong> В чем заключается основное различие между моделями OSI и TCP/IP?</p>
+                <input type="radio" name="question6" value="a"> A. В количестве уровней.<br>
+                <input type="radio" name="question6" value="b"> B. В способе передачи данных.<br>
+                <input type="radio" name="question6" value="c"> C. В поддержке различных типов каналов связи.<br>
+                <input type="radio" name="question6" value="d"> D. В использовании разных протоколов.<br>
+                
+                <!-- Вопрос 7 -->
+                <p><strong>Вопрос 7.</strong> Что такое топология сети?</p>
+                <input type="radio" name="question7" value="a"> A. Способ организации физических соединений между устройствами в сети.<br>
+                <input type="radio" name="question7" value="b"> B. Типы устройств, участвующих в сети.<br>
+                <input type="radio" name="question7" value="c"> C. Методы защиты информации в сети.<br>
+                <input type="radio" name="question7" value="d"> D. Способы настройки маршрутизаторов.<br>
+                
+                <!-- Вопрос 8 -->
+                <p><strong>Вопрос 8.</strong> Какие топологии сетей вы знаете?</p>
+                <input type="radio" name="question8" value="a"> A. Шина, звезда, кольцо, ячеистая.<br>
+                <input type="radio" name="question8" value="b"> B. Локальная, городская, глобальная.<br>
+                <input type="radio" name="question8" value="c"> C. Проводная, беспроводная.<br>
+                <input type="radio" name="question8" value="d"> D. Клиент-сервер, одноранговая.<br>
+                
+                <!-- Вопрос 9 -->
+                <p><strong>Вопрос 9.</strong> Что такое DNS?</p>
+                <input type="radio" name="question9" value="a"> A. Основной набор протоколов, используемых в Интернете.<br>
+                <input type="radio" name="question9" value="b"> B. Система преобразования доменных имен в IP-адреса.<br>
+                <input type="radio" name="question9" value="c"> C. Протокол, используемый для передачи веб-страниц и других данных в Интернете.<br>
+                <input type="radio" name="question9" value="d"> D. Устройство, которое собирает данные от нескольких узлов и передает их дальше по сети.<br>
+                
+                <!-- Вопрос 10 -->
+                <p><strong>Вопрос 10.</strong> Какие перспективные направления развития сетевых технологий вы можете назвать?</p>
+                <input type="radio" name="question10" value="a"> A. Интернет вещей (IoT), облачные вычисления, искусственный интеллект и машинное обучение, квантовые коммуникации.<br>
+                <input type="radio" name="question10" value="b"> B. Разработка новых операционных систем, создание новых языков программирования, внедрение блокчейн-технологий.<br>
+                <input type="radio" name="question10" value="c"> C. Увеличение количества пользователей социальных сетей, развитие онлайн-магазинов, рост популярности видеохостингов.<br>
+                <input type="radio" name="question10" value="d"> D. Создание новых стандартов шифрования, разработка новых антивирусных программ, внедрение биометрической аутентификации.<br>
+                
+                <!-- Кнопки -->
+                 <div class="div_button">
+                <button class="container_test button" type="submit" onclick="checkAnswers(event); return false;">Проверить ответы</button>
+                <button class="container_test button" type="reset">Очистить ответы</button>
+                </div>
+            </form>
+            
+            <div class="result" id="result"></div>
+
+
+        </div>
+    </div>
+
+
+    <!-- Тренажёр №2 -->
+    <div id="hiddenDivTest1" class="modal">
+        <div class="container_test">
+            <span class="close" onclick="hideDivTest1()">&times;</span>
+            
+            <h1>Тренажёр по теме "Физический уровень передачи данных"</h1>
+        
+            <form id="physical-layer-test">
+                <!-- Вопрос 1 -->
+                <p><strong>Вопрос 1.</strong> Что представляет собой аналоговый сигнал?</p>
+                <input type="radio" name="question1" value="a"> A. Непрерывно изменяется во времени и имеет бесконечное количество значений.<br>
+                <input type="radio" name="question1" value="b"> B. Дискретен и принимает только определенные значения (обычно 0 и 1).<br>
+                <input type="radio" name="question1" value="c"> C. Является основным способом передачи данных в цифровых сетях.<br>
+                <input type="radio" name="question1" value="d"> D. Используется исключительно в радиосвязи.<br>
+                
+                <!-- Вопрос 2 -->
+                <p><strong>Вопрос 2.</strong> Какой метод модуляции изменяет частоту несущей волны пропорционально изменению передаваемого сигнала?</p>
+                <input type="radio" name="question2" value="a"> A. Амплитудная модуляция (AM)<br>
+                <input type="radio" name="question2" value="b"> B. Частотная модуляция (FM)<br>
+                <input type="radio" name="question2" value="c"> C. Фазовая модуляция (PM)<br>
+                <input type="radio" name="question2" value="d"> D. Манчестерское кодирование<br>
+                
+                <!-- Вопрос 3 -->
+                <p><strong>Вопрос 3.</strong> Что такое мультиплексирование?</p>
+                <input type="radio" name="question3" value="a"> A. Процесс разделения канала связи на временные интервалы для передачи нескольких потоков данных.<br>
+                <input type="radio" name="question3" value="b"> B. Процесс преобразования цифрового сигнала в аналоговый.<br>
+                <input type="radio" name="question3" value="c"> C. Метод добавления избыточных битов для обнаружения и коррекции ошибок.<br>
+                <input type="radio" name="question3" value="d"> D. Техника изменения фазового угла несущей волны.<br>
+                
+                <!-- Вопрос 4 -->
+                <p><strong>Вопрос 4.</strong> Какой тип кабеля используется в большинстве локальных сетей (LAN)?</p>
+                <input type="radio" name="question4" value="a"> A. Витая пара<br>
+                <input type="radio" name="question4" value="b"> B. Коаксиальный кабель<br>
+                <input type="radio" name="question4" value="c"> C. Оптоволокно<br>
+                <input type="radio" name="question4" value="d"> D. Волоконно-оптический кабель<br>
+                
+                <!-- Вопрос 5 -->
+                <p><strong>Вопрос 5.</strong> Что такое линейное кодирование?</p>
+                <input type="radio" name="question5" value="a"> A. Преобразование цифровых данных в электрические или оптические сигналы для передачи по линиям связи.<br>
+                <input type="radio" name="question5" value="b"> B. Метод, позволяющий нескольким потокам данных передаваться по одному каналу связи.<br>
+                <input type="radio" name="question5" value="c"> C. Процесс определения длины пакета данных.<br>
+                <input type="radio" name="question5" value="d"> D. Кодирование, использующее длинные последовательности нулей и единиц.<br>
+                
+                <!-- Вопрос 6 -->
+                <p><strong>Вопрос 6.</strong> Какой метод кодирования возвращает сигнал к нулю после каждого бита?</p>
+                <input type="radio" name="question6" value="a"> A. NRZ (Non Return to Zero)<br>
+                <input type="radio" name="question6" value="b"> B. RZ (Return to Zero)<br>
+                <input type="radio" name="question6" value="c"> C. Manchester<br>
+                <input type="radio" name="question6" value="d"> D. HDB3<br>
+                
+                <!-- Вопрос 7 -->
+                <p><strong>Вопрос 7.</strong> Какое оборудование используется для подключения компьютера к сети?</p>
+                <input type="radio" name="question7" value="a"> A. Сетевые карты<br>
+                <input type="radio" name="question7" value="b"> B. Модемы<br>
+                <input type="radio" name="question7" value="c"> C. Маршрутизаторы<br>
+                <input type="radio" name="question7" value="d"> D. Коммутаторы<br>
+                
+                <!-- Вопрос 8 -->
+                <p><strong>Вопрос 8.</strong> Какой стандарт используется для разъемов витой пары?</p>
+                <input type="radio" name="question8" value="a"> A. RJ-11<br>
+                <input type="radio" name="question8" value="b"> B. RJ-45<br>
+                <input type="radio" name="question8" value="c"> C. BNC<br>
+                <input type="radio" name="question8" value="d"> D. SC<br>
+                
+                <!-- Вопрос 9 -->
+                <p><strong>Вопрос 9.</strong> Как называется метод мультиплексирования, который разделяет канал по частоте?</p>
+                <input type="radio" name="question9" value="a"> A. TDM (Time Division Multiplexing)<br>
+                <input type="radio" name="question9" value="b"> B. FDM (Frequency Division Multiplexing)<br>
+                <input type="radio" name="question9" value="c"> C. WDM (Wavelength Division Multiplexing)<br>
+                <input type="radio" name="question9" value="d"> D. CDMA (Code Division Multiple Access)<br>
+                
+                <!-- Вопрос 10 -->
+                <p><strong>Вопрос 10.</strong> Какой тип модуляции используется в радиовещании?</p>
+                <input type="radio" name="question10" value="a"> A. AM (Амплитудная модуляция)<br>
+                <input type="radio" name="question10" value="b"> B. FM (Частотная модуляция)<br>
+                <input type="radio" name="question10" value="c"> C. PM (Фазовая модуляция)<br>
+                <input type="radio" name="question10" value="d"> D. QPSK (Quadrature Phase Shift Keying)<br>
+                
+                <!-- Кнопки -->
+                <div class="div_button">
+                    <button class="container_test button" type="submit" onclick="checkAnswers1(event); return false;">Проверить ответы</button>
+                    <button class="container_test button" type="reset">Очистить ответы</button>
+                    </div>
+                </form>
+            
+            <div class="result" id="result1"></div>
+        </div>
+    </div>
+
+    <!-- Тренажёр №3 -->
+    <div id="hiddenDivTest2" class="modal">
+        <div class="container_test">
+            <span class="close" onclick="hideDivTest2()">&times;</span>
+            
+            <h1>Тренажёр по теме "Канальный уровень"</h1>
+        
+            <form id="data-link-layer-test">
+                <!-- Вопрос 1 -->
+                <p><strong>Вопрос 1.</strong> Какие функции выполняет канальный уровень модели OSI?</p>
+                <input type="radio" name="question1" value="a"> A. Управление доступом к среде передачи данных, обнаружение и исправление ошибок, форматирование кадров данных.<br>
+                <input type="radio" name="question1" value="b"> B. Адресация и маршрутизация пакетов данных.<br>
+                <input type="radio" name="question1" value="c"> C. Обеспечение надежности передачи данных между конечными точками.<br>
+                <input type="radio" name="question1" value="d"> D. Преобразование формата данных для совместимости различных систем.<br>
+                
+                <!-- Вопрос 2 -->
+                <p><strong>Вопрос 2.</strong> Какой метод управления доступом к среде передачи данных используется в Ethernet?</p>
+                <input type="radio" name="question2" value="a"> A. CSMA/CD (Carrier Sense Multiple Access with Collision Detection)<br>
+                <input type="radio" name="question2" value="b"> B. Token Passing<br>
+                <input type="radio" name="question2" value="c"> C. Polling<br>
+                <input type="radio" name="question2" value="d"> D. ALOHA<br>
+                
+                <!-- Вопрос 3 -->
+                <p><strong>Вопрос 3.</strong> Каким методом канальный уровень обнаруживает ошибки в передаваемом блоке данных?</p>
+                <input type="radio" name="question3" value="a"> A. CRC (Cyclic Redundancy Check)<br>
+                <input type="radio" name="question3" value="b"> B. ARQ (Automatic Repeat Request)<br>
+                <input type="radio" name="question3" value="c"> C. Parity Checking<br>
+                <input type="radio" name="question3" value="d"> D. Forward Error Correction<br>
+                
+                <!-- Вопрос 4 -->
+                <p><strong>Вопрос 4.</strong> Из каких частей состоит кадр данных на канальном уровне?</p>
+                <input type="radio" name="question4" value="a"> A. Заголовок, полезная нагрузка, трейлер<br>
+                <input type="radio" name="question4" value="b"> B. Адрес источника, адрес назначения, данные<br>
+                <input type="radio" name="question4" value="c"> C. Контрольная сумма, данные, метаданные<br>
+                <input type="radio" name="question4" value="d"> D. Синхронизация, данные, завершение<br>
+                
+                <!-- Вопрос 5 -->
+                <p><strong>Вопрос 5.</strong> Какой протокол канального уровня используется в локальных сетях с кольцевой топологией?</p>
+                <input type="radio" name="question5" value="a"> A. Ethernet<br>
+                <input type="radio" name="question5" value="b"> B. Token Ring<br>
+                <input type="radio" name="question5" value="c"> C. Wi-Fi<br>
+                <input type="radio" name="question5" value="d"> D. ATM<br>
+                
+                <!-- Вопрос 6 -->
+                <p><strong>Вопрос 6.</strong> Как работает метод CSMA/CD в Ethernet?</p>
+                <input type="radio" name="question6" value="a"> A. Узлы ждут, пока среда станет свободной, и начинают передачу, обнаруживая коллизию и откладывая передачу на случайный промежуток времени.<br>
+                <input type="radio" name="question6" value="b"> B. Узлы передают данные последовательно, используя маркер.<br>
+                <input type="radio" name="question6" value="c"> C. Узлы передают данные по расписанию, установленному централизованным контроллером.<br>
+                <input type="radio" name="question6" value="d"> D. Узлы передают данные, используя механизм резервирования полосы пропускания.<br>
+                
+                <!-- Вопрос 7 -->
+                <p><strong>Вопрос 7.</strong> Какой стандарт описывает протоколы для беспроводных локальных сетей?</p>
+                <input type="radio" name="question7" value="a"> A. IEEE 802.3<br>
+                <input type="radio" name="question7" value="b"> B. IEEE 802.11<br>
+                <input type="radio" name="question7" value="c"> C. IEEE 802.16<br>
+                <input type="radio" name="question7" value="d"> D. IEEE 802.5<br>
+                
+                <!-- Вопрос 8 -->
+                <p><strong>Вопрос 8.</strong> Что такое MAC-адрес?</p>
+                <input type="radio" name="question8" value="a"> A. Уникальный идентификатор сетевого интерфейса длиной 48 бит.<br>
+                <input type="radio" name="question8" value="b"> B. Протокол для обнаружения и исправления ошибок.<br>
+                <input type="radio" name="question8" value="c"> C. Стандарт для управления доступом к среде передачи данных.<br>
+                <input type="radio" name="question8" value="d"> D. Метод кодирования данных.<br>
+                
+                <!-- Вопрос 9 -->
+                <p><strong>Вопрос 9.</strong> Как работает протокол ARP (Address Resolution Protocol)?</p>
+                <input type="radio" name="question9" value="a"> A. Преобразует IP-адреса в MAC-адреса.<br>
+                <input type="radio" name="question9" value="b"> B. Управляет доступом к среде передачи данных.<br>
+                <input type="radio" name="question9" value="c"> C. Обеспечивает безопасность передачи данных.<br>
+                <input type="radio" name="question9" value="d"> D. Исправляет ошибки в передаваемых данных.<br>
+                
+                <!-- Вопрос 10 -->
+                <p><strong>Вопрос 10.</strong> Что такое таблица коммутации в контексте коммутируемых сетей?</p>
+                <input type="radio" name="question10" value="a"> A. Таблица, содержащая информацию о маршруте передачи пакетов.<br>
+                <input type="radio" name="question10" value="b"> B. Таблица, хранящая статистику о загруженности сети.<br>
+                <input type="radio" name="question10" value="c"> C. Таблица, используемая для шифрования данных.<br>
+                <input type="radio" name="question10" value="d"> D. Таблица, управляющая доступом к ресурсам сети.<br>
+                
+                <!-- Кнопки -->
+                <!-- Кнопки -->
+                <div class="div_button">
+                    <button class="container_test button" type="submit" onclick="checkAnswers2(event); return false;">Проверить ответы</button>
+                    <button class="container_test button" type="reset">Очистить ответы</button>
+                    </div>
+            </form>
+            
+            <div class="result" id="result2"></div>
+        </div>
+    </div>
+
+        <!-- Тренажёр №4 -->
+    <div id="hiddenDivTest3" class="modal">
+        <div class="container_test">
+            <span class="close" onclick="hideDivTest3()">&times;</span>
+            
+            <h1>Тренажёр по теме "Сетевой уровень"</h1>
+        
+            <form id="network-layer-test">
+                <!-- Вопрос 1 -->
+                <p><strong>Вопрос 1.</strong> Какие основные задачи выполняет сетевой уровень модели OSI?</p>
+                <input type="radio" name="question1" value="a"> A. Маршрутизация, логическая адресация, фрагментация и сборка пакетов.<br>
+                <input type="radio" name="question1" value="b"> B. Управление доступом к среде передачи данных, обнаружение и исправление ошибок.<br>
+                <input type="radio" name="question1" value="c"> C. Обеспечение надежности передачи данных между конечными точками.<br>
+                <input type="radio" name="question1" value="d"> D. Преобразование формата данных для совместимости различных систем.<br>
+                
+                <!-- Вопрос 2 -->
+                <p><strong>Вопрос 2.</strong> Какой протокол используется для маршрутизации в небольших сетях?</p>
+                <input type="radio" name="question2" value="a"> A. RIP (Routing Information Protocol)<br>
+                <input type="radio" name="question2" value="b"> B. OSPF (Open Shortest Path First)<br>
+                <input type="radio" name="question2" value="c"> C. BGP (Border Gateway Protocol)<br>
+                <input type="radio" name="question2" value="d"> D. EIGRP (Enhanced Interior Gateway Routing Protocol)<br>
+                
+                <!-- Вопрос 3 -->
+                <p><strong>Вопрос 3.</strong> Что такое IP-адрес?</p>
+                <input type="radio" name="question3" value="a"> A. Уникальный идентификатор сетевого интерфейса длиной 48 бит.<br>
+                <input type="radio" name="question3" value="b"> B. Логический адрес, назначаемый каждому устройству в сети.<br>
+                <input type="radio" name="question3" value="c"> C. Протокол для обнаружения и исправления ошибок.<br>
+                <input type="radio" name="question3" value="d"> D. Метод кодирования данных.<br>
+                
+                <!-- Вопрос 4 -->
+                <p><strong>Вопрос 4.</strong> Чем отличается IPv6 от IPv4?</p>
+                <input type="radio" name="question4" value="a"> A. Большим размером адреса (128 бит против 32 бит).<br>
+                <input type="radio" name="question4" value="b"> B. Улучшенной поддержкой мобильности и встроенной защитой.<br>
+                <input type="radio" name="question4" value="c"> C. Гибким делением адресного пространства с использованием CIDR.<br>
+                <input type="radio" name="question4" value="d"> D. Всем вышеперечисленным.<br>
+                
+                <!-- Вопрос 5 -->
+                <p><strong>Вопрос 5.</strong> Что такое маска подсети?</p>
+                <input type="radio" name="question5" value="a"> A. Механизм для деления IP-адреса на номер сети и номер хоста.<br>
+                <input type="radio" name="question5" value="b"> B. Протокол для маршрутизации между автономными системами.<br>
+                <input type="radio" name="question5" value="c"> C. Алгоритм для нахождения кратчайших путей в сети.<br>
+                <input type="radio" name="question5" value="d"> D. Метод для шифрования данных в сети.<br>
+                
+                <!-- Вопрос 6 -->
+                <p><strong>Вопрос 6.</strong> Какой протокол используется для диагностики сети и отправки сообщений об ошибках?</p>
+                <input type="radio" name="question6" value="a"> A. ICMP (Internet Control Message Protocol)<br>
+                <input type="radio" name="question6" value="b"> B. UDP (User Datagram Protocol)<br>
+                <input type="radio" name="question6" value="c"> C. TCP (Transmission Control Protocol)<br>
+                <input type="radio" name="question6" value="d"> D. FTP (File Transfer Protocol)<br>
+                
+                <!-- Вопрос 7 -->
+                <p><strong>Вопрос 7.</strong> Что такое статические маршруты?</p>
+                <input type="radio" name="question7" value="a"> A. Маршруты, настроенные вручную администратором сети.<br>
+                <input type="radio" name="question7" value="b"> B. Маршруты, автоматически выбираемые на основе текущей топологии сети.<br>
+                <input type="radio" name="question7" value="c"> C. Маршруты, используемые для передачи данных внутри одной сети.<br>
+                <input type="radio" name="question7" value="d"> D. Маршруты, основанные на алгоритме Дейкстры.<br>
+                
+                <!-- Вопрос 8 -->
+                <p><strong>Вопрос 8.</strong> Какой алгоритм маршрутизации используется в протоколе OSPF?</p>
+                <input type="radio" name="question8" value="a"> A. Векторно-дистанционный алгоритм<br>
+                <input type="radio" name="question8" value="b"> B. Алгоритм Дейкстры<br>
+                <input type="radio" name="question8" value="c"> C. Алгоритм Беллмана-Форда<br>
+                <input type="radio" name="question8" value="d"> D. Алгоритм Форда-Фалкерсона<br>
+                
+                <!-- Вопрос 9 -->
+                <p><strong>Вопрос 9.</strong> Что такое мультикастинг?</p>
+                <input type="radio" name="question9" value="a"> A. Передача данных нескольким получателям одновременно.<br>
+                <input type="radio" name="question9" value="b"> B. Передача данных всем получателям в сети.<br>
+                <input type="radio" name="question9" value="c"> C. Передача данных по заранее заданному маршруту.<br>
+                <input type="radio" name="question9" value="d"> D. Передача данных с использованием алгоритма Дейкстры.<br>
+                
+                <!-- Вопрос 10 -->
+                <p><strong>Вопрос 10.</strong> Какой протокол управляет членством в группах многоадресной рассылки?</p>
+                <input type="radio" name="question10" value="a"> A. IGMP (Internet Group Management Protocol)<br>
+                <input type="radio" name="question10" value="b"> B. PIM (Protocol Independent Multicast)<br>
+                <input type="radio" name="question10" value="c"> C. OSPF (Open Shortest Path First)<br>
+                <input type="radio" name="question10" value="d"> D. RIP (Routing Information Protocol)<br>
+                
+                <!-- Кнопки -->
+                <div class="div_button">
+                    <button class="container_test button" type="submit" onclick="checkAnswers3(event); return false;">Проверить ответы</button>
+                    <button class="container_test button" type="reset">Очистить ответы</button>
+                    </div>
+            </form>
+            
+            <div class="result" id="result3"></div>
+
+        </div>
+    </div>
+
+    <!-- Тренажёр №5 -->
+    <div id="hiddenDivTest4" class="modal">
+        <div class="container_test">
+            <span class="close" onclick="hideDivTest4()">&times;</span>
+            
+            <h1>Тренажёр по теме "Транспортный уровень"</h1>
+        
+            <form id="transport-layer-test">
+                <!-- Вопрос 1 -->
+                <p><strong>Вопрос 1.</strong> Какие основные задачи выполняет транспортный уровень модели OSI?</p>
+                <input type="radio" name="question1" value="a"> A. Установление соединений между приложениями, контроль потока данных, обеспечение надежной доставки данных.<br>
+                <input type="radio" name="question1" value="b"> B. Маршрутизация и логическая адресация.<br>
+                <input type="radio" name="question1" value="c"> C. Обнаружение и исправление ошибок на канальном уровне.<br>
+                <input type="radio" name="question1" value="d"> D. Преобразование формата данных для совместимости различных систем.<br>
+                
+                <!-- Вопрос 2 -->
+                <p><strong>Вопрос 2.</strong> Какой протокол транспортного уровня обеспечивает надежную доставку данных с установлением соединения?</p>
+                <input type="radio" name="question2" value="a"> A. TCP (Transmission Control Protocol)<br>
+                <input type="radio" name="question2" value="b"> B. UDP (User Datagram Protocol)<br>
+                <input type="radio" name="question2" value="c"> C. ICMP (Internet Control Message Protocol)<br>
+                <input type="radio" name="question2" value="d"> D. IP (Internet Protocol)<br>
+                
+                <!-- Вопрос 3 -->
+                <p><strong>Вопрос 3.</strong> Какая особенность UDP делает его менее надежным, чем TCP?</p>
+                <input type="radio" name="question3" value="a"> A. Отсутствие механизма подтверждения приема пакетов.<br>
+                <input type="radio" name="question3" value="b"> B. Отсутствие контроля потока данных.<br>
+                <input type="radio" name="question3" value="c"> C. Отсутствие управления соединением.<br>
+                <input type="radio" name="question3" value="d"> D. Все вышеперечисленное.<br>
+                
+                <!-- Вопрос 4 -->
+                <p><strong>Вопрос 4.</strong> Как называется процесс трехэтапного установления соединения в TCP?</p>
+                <input type="radio" name="question4" value="a"> A. Handshake<br>
+                <input type="radio" name="question4" value="b"> B. Connection Setup<br>
+                <input type="radio" name="question4" value="c"> C. Three-Way Exchange<br>
+                <input type="radio" name="question4" value="d"> D. Establishment Procedure<br>
+                
+                <!-- Вопрос 5 -->
+                <p><strong>Вопрос 5.</strong> Что такое хорошо известный порт?</p>
+                <input type="radio" name="question5" value="a"> A. Порт, зарезервированный для стандартных сервисов, таких как HTTP (порт 80).<br>
+                <input type="radio" name="question5" value="b"> B. Порт, используемый приложениями для передачи данных.<br>
+                <input type="radio" name="question5" value="c"> C. Порт, назначаемый системой операционной системы.<br>
+                <input type="radio" name="question5" value="d"> D. Порт, используемый для передачи файлов.<br>
+                
+                <!-- Вопрос 6 -->
+                <p><strong>Вопрос 6.</strong> Что такое сокет?</p>
+                <input type="radio" name="question6" value="a"> A. Конечная точка сетевого соединения, через которую происходит передача данных.<br>
+                <input type="radio" name="question6" value="b"> B. Множество пакетов данных, передаваемых одновременно.<br>
+                <input type="radio" name="question6" value="c"> C. Программа, управляющая сетью.<br>
+                <input type="radio" name="question6" value="d"> D. Протокол, обеспечивающий надежность передачи данных.<br>
+                
+                <!-- Вопрос 7 -->
+                <p><strong>Вопрос 7.</strong> Что означает термин "контроль потока данных"?</p>
+                <input type="radio" name="question7" value="a"> A. Регулировка скорости передачи данных для предотвращения перегрузки приемника.<br>
+                <input type="radio" name="question7" value="b"> B. Обеспечение порядка следования пакетов.<br>
+                <input type="radio" name="question7" value="c"> C. Проверка целостности данных.<br>
+                <input type="radio" name="question7" value="d"> D. Устанавливает соединение между приложениями.<br>
+                
+                <!-- Вопрос 8 -->
+                <p><strong>Вопрос 8.</strong> Что такое Quality of Service (QoS)?</p>
+                <input type="radio" name="question8" value="a"> A. Набор механизмов, обеспечивающих требуемое качество передачи данных в сети.<br>
+                <input type="radio" name="question8" value="b"> B. Протокол, используемый для маршрутизации данных.<br>
+                <input type="radio" name="question8" value="c"> C. Программное обеспечение для управления сетью.<br>
+                <input type="radio" name="question8" value="d"> D. Устройство для фильтрации данных.<br>
+                
+                <!-- Вопрос 9 -->
+                <p><strong>Вопрос 9.</strong> Какие механизмы используются для обеспечения QoS?</p>
+                <input type="radio" name="question9" value="a"> A. Приоритетные очереди и резервирование ресурсов.<br>
+                <input type="radio" name="question9" value="b"> B. Контроль ошибок и восстановление потерянных пакетов.<br>
+                <input type="radio" name="question9" value="c"> C. Управление потоком данных и подтверждение приема.<br>
+                <input type="radio" name="question9" value="d"> D. Установка соединений и регулирование скорости передачи.<br>
+                
+                <!-- Вопрос 10 -->
+                <p><strong>Вопрос 10.</strong> Почему UDP предпочтителен для мультимедийных приложений?</p>
+                <input type="radio" name="question10" value="a"> A. Он обеспечивает минимальную задержку и отсутствие гарантии доставки.<br>
+                <input type="radio" name="question10" value="b"> B. Он поддерживает установку соединений и контроль потока данных.<br>
+                <input type="radio" name="question10" value="c"> C. Он предоставляет высокую надежность передачи данных.<br>
+                <input type="radio" name="question10" value="d"> D. Он предназначен для передачи больших объемов данных.<br>
+                
+                <!-- Кнопки -->
+                <div class="div_button">
+                    <button class="container_test button" type="submit" onclick="checkAnswers4(event); return false;">Проверить ответы</button>
+                    <button class="container_test button" type="reset">Очистить ответы</button>
+                    </div>
+            </form>
+            
+            <div class="result" id="result4"></div>
+        </div>
+    </div>
+
+    <div class="also-q">  
+        <p>Есть вопрос или замечание?</p>
+        <a href="feedback.html"><i class='bx bx-right-arrow-alt bx-fade-left' ></i>Пиши сюда </a>
+    </div>
+    
+    <a href="#" class="scroll-down"><i class='bx bxs-down-arrow-circle bx-flashing' ></i></a>
+
+    <footer>
+        <div class="bottom_footer">
+            <p>
+                Разработчик: Довгалёв Станислав
+            </p>
+            <div class="socials">
+                <a href="https://vk.com/xse1ect0x"><i class='bx bxl-vk'></i></a>
+                <a href="https://t.me/xSe1ect0x"><i class='bx bxl-telegram' ></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/script-tests.js"></script>
+</body>
+</html>

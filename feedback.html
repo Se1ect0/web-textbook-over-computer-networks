@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Пособие по компьютерным сетям</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="assets/logo.png">
+            <a href="#">Пособие по компьютерным сетям</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="lectures.html">Лекции</a>
+            <a href="tasks.html">Практические задания</a>
+            <a href="tests.html">Тренажёры</a>
+            <a class="selected" href="feedback.html">Обратная связь</a>
+        </div>
+    </nav>
+
+    <h1 class="page-title"></h1>
+
+    <div class="container-reg">
+        <h1 class="animated-text">Есть какие-то вопросы или замечание, напиши!</h1>
+    </div> 
+
+    <form id="feedback" action="vendor/create.php" method="post">
+        <h2 style="text-align:center;">Форма обратной связи</h2>
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+    
+        <label for="last_name">Фамилия:</label>
+        <input type="text" id="last_name" name="last_name" placeholder="Введите вашу фамилию" required>
+    
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" placeholder="Введите вашу электронную почту" required>
+    
+        <label for="question">Вопрос или замечание:</label>
+        <textarea id="question" name="question" placeholder="Опишите ваш вопрос или замечание..." required></textarea>
+    
+        <label for="additional-info">Дополнительная информация:</label>
+        <textarea id="additional-info" name="additional_info" placeholder="Укажите любую дополнительную информацию..."></textarea>
+    
+        <button type="submit" class="feedback_button">Отправить</button>
+    </form>
+
+    
+
+    <a href="#" class="scroll-down"><i class='bx bxs-down-arrow-circle bx-flashing' ></i></a>
+
+    <footer>
+        <div class="bottom_footer">
+            <p>
+                Разработчик: Довгалёв Станислав
+            </p>
+            <div class="socials">
+                <a href="https://vk.com/xse1ect0x"><i class='bx bxl-vk'></i></a>
+                <a href="https://t.me/xSe1ect0x"><i class='bx bxl-telegram' ></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script-feedback.js"></script>  
+</body>
+
+</html>

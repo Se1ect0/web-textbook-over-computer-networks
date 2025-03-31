@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Пособие по компьютерным сетям</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="assets/logo.png">
+            <a href="#">Пособие по компьютерным сетям</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="lectures.html">Лекции</a>
+            <a class="selected" href="tasks.html">Практические задания</a>
+            <a href="tests.html">Тренажёры</a>
+            <a href="feedback.html">Обратная связь</a>
+        </div>
+    </nav>
+
+    <h1 class="page-title">Практические задания</h1>
+
+    <div class="content">
+        <div class="works-list">
+            <div class="item">
+                <img src="assets/item-1.jpg">
+                <div class="details">
+                    <h3>Построение схемы компьютерной сети</h3>
+                    <div class="item-info">
+                        <div class="year-badge">Практическая №1</div>
+                    </div>
+                        <button onclick="toggleVisibility()" type="button">Перейти к практической</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/item-2.jpg">
+                <div class="details">
+                    <h3>Настройка протоколов TCP/IP в операционных системах</h3>
+                    <div class="item-info">
+                        <div class="year-badge">Практическая №2</div>
+                    </div>
+                        <button onclick="toggleVisibility1()" type="button">Перейти к практической</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/item-3.jpg">
+                <div class="details">
+                    <h3>Работа с диагностическими утилитами протокола
+                        ТСР/IР</h3>
+                    <div class="item-info">
+                        <div class="year-badge">Практическая №3</div>
+                    </div>
+                        <button onclick="toggleVisibility2()" type="button">Перейти к практической</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/item-4.jpg">
+                <div class="details">
+                    <h3>Решение проблем с TCP/IP</h3>
+                    <div class="item-info">
+                        <div class="year-badge">Практическая №4</div>
+                    </div>
+                        <button onclick="toggleVisibility3()" type="button">Перейти к практической</button>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/item-5.jpg">
+                <div class="details">
+                    <h3>Преобразование форматов IP-адресов</h3>
+                    <div class="item-info">
+                        <div class="year-badge">Практическая №5</div>
+                    </div>
+                        <button onclick="toggleVisibility4()" type="button">Перейти к практической</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hiddenDiv" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideDiv()">&times;</span>
+            <br>
+                <p><p>Практическая работа предназначена для освоения навыков построения компьютерных сетей с использованием программы MS Visio 2016. В ходе выполнения задания студенты знакомятся с основными функциями программы, такими как создание деловых графиков, диаграмм и схем. Особое внимание уделяется применению MS Visio в сфере IT, где она помогает визуализировать различные процессы и структуры.</p><br>
+                <p>На первом этапе работы студенты запускают программу и изучают её интерфейс, а также добавляют нужные панели инструментов для форматирования текста и фигур. Затем они просматривают доступные шаблоны схем и выбирают подходящий для создания схемы корпоративной сети. Далее происходит процесс сборки схемы, включающий добавление основных элементов сети (серверов, рабочих станций, маршрутизаторов и т.д.), настройку соединений между ними и оформление итогового документа.</p><br>   
+                <p>Эта работа позволяет студентам приобрести практические навыки работы с графическими инструментами, необходимыми для эффективного проектирования и документирования сетевой инфраструктуры.</p></p><br>
+                <br><a href="assets/пр 1.docx" download>Скачать файл</a>
+        </div>
+    </div>
+
+    <div id="hiddenDiv1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideDiv1()">&times;</span>
+            <br>
+            <p>
+            <p>Практическая работа №2 посвящена изучению и настройке протоколов TCP/IP в операционных системах. Основная цель работы заключается в закреплении знаний о межсетевом взаимодействии и приобретении практических навыков настройки сетевых параметров.</p><br>
+            <p>Теоретическая часть:</p><br>
+            <p>TCP/IP — это основной набор протоколов, используемый в интернете и локальных сетях. Он состоит из протоколов IP (ответственного за маршрутизацию) и TCP (обеспечивающего надежную передачу данных).</p><br>
+            <p>Протоколы TCP/IP требуют настройки в операционных системах, включая задание IP-адреса, сетевой маски и шлюза по умолчанию.</p><br>
+            <p>Практическая часть:</p><br>
+            <p>Установка TCP/IP:</p>
+            <p>Запустите панель управления Windows.</p>
+            <p>Найдите и выберите нужный сетевой интерфейс.</p>
+            <p>Установите протокол TCP/IP через соответствующий диалог.</p><br>
+            <p>Настройка параметров:</p>
+            <p>IP-адрес — уникальный идентификатор устройства в сети.</p>
+            <p>Сетевая маска — определяет границы подсетей.</p>
+            <p>Шлюз по умолчанию — устройство, через которое осуществляются выходы в другие сети.</p>
+            <p>Этот процесс помогает глубже понять принципы работы сетевых протоколов и развить навыки управления сетями в операционных системах.</p><br>
+                <br><a href="assets/пр 2.docx" download>Скачать файл</a>
+        </div>
+    </div>
+
+    <div id="hiddenDiv2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideDiv2()">&times;</span>
+            <br>
+            <p>
+            <p>Практическая работа №3 посвящена диагностике и настройке сетевых протоколов TCP/IP с использованием утилит. Цель работы — углубленное изучение межсетевого взаимодействия и приобретение навыков работы с диагностическим инструментарием.</p><br>
+
+            <p>В теоретической части рассматриваются утилиты, такие как ARP, ipconfig, ping, tracert и другие, которые применяются для проверки конфигурации сети, тестирования связи с удалёнными хостами и анализа маршрутов прохождения пакетов.</p><br>
+
+            <p>Практическая часть включает задания по использованию утилиты ipconfig для проверки параметров TCP/IP, команды ping для тестирования связи и утилиты tracert для трассировки маршрута до удалённого хоста. Эти навыки важны для сетевых администраторов и специалистов по ИТ.</p></p><br>
+            <a href="assets/пр 3.docx" download>Скачать файл</a>
+        </div>
+    </div>
+
+    <div id="hiddenDiv3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideDiv3()">&times;</span>
+            <br>
+            <p>Практическая работа №4 посвящена решению проблем, связанных с протоколами TCP/IP. Цель работы — изучить методы диагностики и устранения неполадок в сетевых соединениях. В теоретической части рассматриваются основные компоненты TCP/IP, такие как протоколы TCP и IP, а также вспомогательные протоколы, такие как ARP, ICMP и RARP. В практической части студенты выполняют задания по диагностике сети с помощью команд ping и ipconfig, определяют тип сетевого адаптера и проверяют конфигурацию IP-адресов. Также они учатся сбрасывать DNS-кэш и проверять систему на наличие вредоносного ПО.</p><br>
+            <a href="assets/пр 4.docx" download>Скачать файл</a>
+        </div>
+    </div>
+
+    <div id="hiddenDiv4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideDiv4()">&times;</span>
+            <br>
+            <p>Практическая работа №5 посвящена преобразованию форматов IP-адресов и расчёту сетевых параметров. Цель работы — изучение основ IP-адресации и приобретение навыков определения IP-адресов и масок подсетей.
+                
+            Практическая часть включает перевод IP-адресов из двоичной формы в десятичную и наоборот, определение классов IP-адресов, расчёт параметров сети, нахождение минимального и максимального IP-адреса, а также проверку корректности адресов.</p><br>
+            <a href="assets/пр 5.docx" download>Скачать файл</a>
+        </div>
+    </div>
+
+    <div class="also-q">  
+        <p>Есть вопрос или замечание?</p>
+        <a href="feedback.html"><i class='bx bx-right-arrow-alt bx-fade-left' ></i>Пиши сюда </a>
+    </div>
+
+    <a href="#" class="scroll-down"><i class='bx bxs-down-arrow-circle bx-flashing' ></i></a>
+
+    <footer>
+        <div class="bottom_footer">
+            <p>
+                Разработчик: Довгалёв Станислав
+            </p>
+            <div class="socials">
+                <a href="https://vk.com/xse1ect0x"><i class='bx bxl-vk'></i></a>
+                <a href="https://t.me/xSe1ect0x"><i class='bx bxl-telegram' ></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script-tasks.js"></script>
+</body>
+
+</html>
